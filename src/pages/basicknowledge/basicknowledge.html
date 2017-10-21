@@ -7,7 +7,7 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>Basic Knowledge</ion-title>
+        <ion-title>Basics</ion-title>
     </ion-navbar>
 
 </ion-header>
@@ -16,33 +16,69 @@
 <ion-content padding>
     <ion-card>
 
-        <img src="img/advance-card-map-madison.png">
-        <ion-fab right top>
-            <button ion-fab>
-              <ion-icon name="pin"></ion-icon>
-            </button>
-        </ion-fab>
+        <ion-card-header>
+            Goal
+        </ion-card-header>
 
+        <ion-card-content>
+            Our goal is to inspire not no manipulate<br/> Manipulation increases stress in society, fear is a wonderful manipulator<br/>And none of the manipulations breed loyalty.
+        </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+
+        <ion-card-header>
+            Think, Act, Communicate.
+        </ion-card-header>
+
+        <ion-card-content>
+            Think, Act, Communicate excatly at the same time.
+        </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+
+        <ion-card-header>
+            Think, Act, Communicate.
+        </ion-card-header>
+
+        <ion-card-content>
+            Everything we do we belive in challenging the status quo, we belive in thinking differently<br/> The way we challange status quo is by maing our product design simple to use and user friendly.
+        </ion-card-content>
+
+    </ion-card>
+    <ion-card>
+
+        <ion-card-header>
+            Our goal is not to fix your weakness, our goal to amplify your strength and surround you with people who belive what you belive
+        </ion-card-header>
+
+        <ion-card-content>
+            So that<br/> - We are more willing to take risk.<br/> - We are more willing to experiment, which requires failure.<br/> - We are more willing to explore, go somewhere where no one has gone before with the confidence that if we fail, if we
+            tripple over, if we turn our backs, that those from our community, that those whom we trust and those who trust us will look after us, will pick up when we fall over ,<br/>will help us when we are hurt, our very survival depends on on it.<br/>
+        </ion-card-content>
+
+    </ion-card>
+    <ion-card (tap)="tapEvent($event)">
         <ion-item>
-            <ion-icon name="football" item-start large></ion-icon>
-            <h2>Museum of Football</h2>
-            <p>11 N. Way St, Madison, WI 53703</p>
+            Tapped: {{tap}} times
         </ion-item>
-
+    </ion-card>
+    <ion-card (press)="pressEvent($event)">
         <ion-item>
-            <ion-icon name="wine" item-left large></ion-icon>
-            <h2>Institute of Fine Cocktails</h2>
-            <p>14 S. Hop Avenue, Madison, WI 53703</p>
+            Pressed: {{press}} times
         </ion-item>
+    </ion-card>
 
+    <ion-card (pan)="panEvent($event)">
         <ion-item>
-            <span item-left>18 min</span>
-            <span item-left>(2.6 mi)</span>
-            <button ion-button icon-left clear item-end>
-              <ion-icon name="navigate"></ion-icon>
-              Start
-            </button>
+            Panned: {{pan}} times
         </ion-item>
+    </ion-card>
 
+    <ion-card (swipe)="swipeEvent($event)">
+        <ion-item>
+            Swiped: {{swipe}} times
+        </ion-item>
     </ion-card>
 </ion-content>
