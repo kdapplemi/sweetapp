@@ -7,8 +7,7 @@ import { YouPage } from '../you/you';
 import { BasicKnowledgePage } from '../basicknowledge/basicknowledge';
 
 @Component({
-  templateUrl: 'tabs.html',
-  styleUrls: ['tabs.css'],
+  templateUrl: 'tabs.html'
 })
 export class TabsPage {
 
